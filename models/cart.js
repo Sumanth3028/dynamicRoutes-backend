@@ -1,11 +1,8 @@
-const fs = require("fs");
-const path = require("path");
+const Sequelize=require('sequelize')
 
-const p = path.join(
-  path.dirname(process.memoryUsage().toString()),
-  "data",
-  "cart.json"
-);
+const sequelize=require('../util/database')
+
+
 
 module.exports = class Cart {
   static addProduct(id, price) {
